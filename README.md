@@ -1,4 +1,10 @@
-# Day 2
+## Day 3
+
+Didn't bother timing as negligible volume of input data, given I think the task runs in O(n) time.
+
+Indeed appears instant — despite adding up to over a million billion! What a world we live in.
+
+## Day 2
 
 Had great fun optimising for part 1.
 
@@ -14,7 +20,7 @@ Time: 2.0930 seconds
 
 ...as reflected in the timings!
 
-# Day 1
+## Day 1
 
 After producing the performant solution I was brushing my teeth, when I wondered whether a simple, "one click at a time" solution would have been prohibatively slow.
 
