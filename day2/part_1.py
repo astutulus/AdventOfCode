@@ -32,9 +32,9 @@ def count_invalid_id(first: str, last: str) -> int:
     return invalid_id_sum
 
 
-def solve(data_path: str):
+def solve(filepath: str):
 
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         data = file.readline().strip()
         ranges = data.split(',')
 
@@ -48,4 +48,4 @@ def solve(data_path: str):
         print(f"Sum of invlid IDs in the input data: {answer}")
 
 if __name__ == "__main__":
-    solve()
+    solve("day2\\input.txt")

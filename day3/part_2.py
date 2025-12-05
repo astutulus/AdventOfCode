@@ -16,13 +16,14 @@ def resolve_line(line: str) -> int:
     joltage_string = ''.join(str(j) for j in joltage_list)  # pqr...
     return int(joltage_string)
 
-def solve(data_path: str):
+def solve(filepath: str):
     total_joltage = 0
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
             total_joltage += resolve_line(line)
     print(f"Answer: {total_joltage}")
 
 if __name__ == "__main__":
-    # solve("day_3\\examples.txt")
-    solve("day_3\\input.txt")
+    filename = ["examples",  # index 0
+                "input"]     # index 1
+    solve(f"day3\\{filename[1]}.txt")  # Change index to switch data set

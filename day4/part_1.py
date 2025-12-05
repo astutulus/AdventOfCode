@@ -1,12 +1,12 @@
-def solve(data_path: str):
+def solve(filepath: str):
     elves_diagram = []
 
     # Not elegant, but doesn't cost as only called once
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         width = len(file.readline().strip())
 
     # Read the entire diagram into a single list
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
             for char in line.strip():
                 elves_diagram.append(char)
@@ -45,6 +45,8 @@ def solve(data_path: str):
             qty_rolls_accessible += 1
     print(f"Quantity of rolls accessible: {qty_rolls_accessible}")
 
-#solve("day4\\debug.txt")
-#solve("day4\\example.txt")
-solve("day4\\input.txt")
+if __name__ == "__main__":
+    filename = ["debug",     # index 0
+                "example",   # index 1
+                "input"]     # index 2
+    solve(f"day4\\{filename[2]}.txt")  # Change index to switch data set

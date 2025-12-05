@@ -1,3 +1,19 @@
+## Day 5
+
+### Part 1 
+
+Just a question of how much fun you want to have tidying the code!
+
+Mostly left it verbose but was happy to brush up on the Python `map()` function.
+
+### Part 2
+
+Relaxing. Learnt about Python `enumerate` to walk through list from second element.
+
+## Day 4
+
+Went for one giant list, but a 2D array would've made it simpler to keep in range, at west and east edges of each row.   
+
 ## Day 3
 
 Didn't bother timing as negligible volume of input data, given I think the task runs in O(n) time.

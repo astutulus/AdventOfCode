@@ -1,4 +1,4 @@
-def solve(data_path: str):
+def solve(filepath: str):
 
     # Info to be read from file
     fresh_ingredient_ranges = []
@@ -8,7 +8,7 @@ def solve(data_path: str):
     reading_fresh_ingredients = True  
 
     # Read file
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
             if reading_fresh_ingredients:
                 if line.strip() == "":
@@ -35,5 +35,7 @@ def solve(data_path: str):
 
     print(f"Answer: {count_available_ingredients_that_are_fresh}")
 
-#solve("day5\\example.txt")
-solve("day5\\input.txt")
+if __name__ == "__main__":
+    filename = ["example",  # index 0
+                "input"]     # index 1
+    solve(f"day5\\{filename[1]}.txt")  # Change index to switch data set

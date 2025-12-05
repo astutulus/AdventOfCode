@@ -36,7 +36,8 @@ def resolve_line(line):
             zero_counter += abs(dial_position) // 100  # Number of further times passing zero
             dial_position %= 100  # Return dial to valid range
 
-def read_file_line_by_line(filepath):
+def solve(filepath):
+    # Read file line by line
     try:
         with open(filepath, "r", encoding="utf-8") as file:
             for line in file:
@@ -47,4 +48,4 @@ def read_file_line_by_line(filepath):
     print (f"Answer: {zero_counter}")
 
 if __name__ == "__main__":
-    read_file_line_by_line("day-1\\input.txt")
+    solve("day1\\input.txt")

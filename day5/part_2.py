@@ -13,12 +13,12 @@ def merge_overlapping_tuples(t1, t2):
     else:
         return (min(t1[0], t2[0]), max(t1[1], t2[1]))
 
-def solve(data_path: str):
+def solve(filepath: str):
     
     fresh_ranges = []
 
     # Read ranges from file
-    with open(data_path, "r", encoding="utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
             if line.strip() == "":
                 # Data after blank line is redundant for part 2
@@ -50,5 +50,7 @@ def solve(data_path: str):
         count_fresh_ids += i[1] - i[0] + 1  # Inclusive range
     print(f"Answer: {count_fresh_ids}")
 
-#solve("day5\\example.txt")
-solve("day5\\input.txt")
+if __name__ == "__main__":
+    filename = ["example",  # index 0
+                "input"]     # index 1
+    solve(f"day5\\{filename[1]}.txt")  # Change index to switch data set
