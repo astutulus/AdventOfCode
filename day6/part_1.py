@@ -33,5 +33,6 @@ def solve(filepath: str):
     print(f"Answer: {total}")
 
 if __name__ == "__main__":
-    filename = ["example", "input"]
+    filename = ["example",  # index 0
+                "input"]    # index 1
     solve(f"day6\\{filename[1]}.txt")  # Change index to switch data set

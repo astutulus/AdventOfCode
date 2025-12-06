@@ -72,16 +72,18 @@ def solve(filepath: str):
                 column_sum = 0
                 for n in problem_operands:
                     column_sum += n
-                # print(f"Added problem operands: {problem_operands} = {column_sum}")
                 total += column_sum
-
+                # 
+                # print(f"Added {problem_operands} = {column_sum}")
+                # 
             case '*':
                 column_product = 1
                 for n in problem_operands:
                     column_product *= n
-                # print(f"Multiplied problem operands: {problem_operands} = {column_product}")
                 total += column_product
-
+                # 
+                # print(f"Multiplied {problem_operands} = {column_product}")
+                # 
             case _:
                 print("Unknown operator: ", problem_operator)
                 
@@ -91,5 +93,6 @@ def solve(filepath: str):
     print(f"Answer: {total}")
 
 if __name__ == "__main__":
-    filename = ["example", "input"]
+    filename = ["example",  # index 0
+                "input"]    # index 1
     solve(f"day6\\{filename[1]}.txt")  # Change index to switch data set

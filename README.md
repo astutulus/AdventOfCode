@@ -1,3 +1,11 @@
+## Day 6
+
+Part 2 was my most longwinded yet, in an effort to keep it clear to myself.
+
+Added debug `print()` and even some `try` blocks, in case data had been "ragged" (so final sums incomplete).
+
+Turned out the input text had been prepared extra-friendly, with extra spaces to avoid this issue.
+
 ## Day 5
 
 ### Part 1 
