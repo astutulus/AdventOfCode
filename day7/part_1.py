@@ -17,7 +17,7 @@ def solve(filepath: str) -> int:
                     if char == "^":
                         if beams [i]:
                             beams[i-1] |= True  # OR left beam
-                            beams[i] &= False  # AND NOT incoming beam
+                            beams[i] = False  # Block incoming beam
                             beams[i+1] |= True  # OR right beam
                             splits += 1
     return splits
