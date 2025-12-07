@@ -14,16 +14,15 @@ def solve(filepath: str) -> int:
             # All subsequent rows
             else:  
                 for i, char in enumerate(line):
-                    if char == "^":
-                        if beams [i]:
-                            beams[i-1] |= True  # OR left beam
-                            beams[i] = False  # Block incoming beam
-                            beams[i+1] |= True  # OR right beam
-                            splits += 1
+                    if char == "^" and beams [i]:
+                        beams[i-1] |= True  # OR left beam
+                        beams[i] = False  # Block incoming beam
+                        beams[i+1] |= True  # OR right beam
+                        splits += 1
     return splits
 
 if __name__ == "__main__":
     filename = ["debug",    # index 0
                 "example",  # index 1
                 "input"]    # index 2
-    print(f"Answer: {solve(f"day7\\{filename[2]}.txt")}")  # Change index to switch data set
+    print(f"Answer: {solve(f"day7\\{filename[2]}.txt")}")  # Set filename
