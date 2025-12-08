@@ -4,6 +4,10 @@ Definitely the most involved yet.
 
 Got the day off to a great start, that I managed to finish part 1 by `08:35 am`
 
+Very happy I used **classes** to keep organised today. Really saved on dev time.
+
+Part 2 needed lots more thought, but just a few more fields and methods.
+
 ## Day 7
 
 Beautiful and relaxing; most enjoyable yet!
