@@ -1,3 +1,13 @@
+## Day 8
+
+Definitely the most involved yet.
+
+Got the day off to a great start, that I managed to finish part 1 by `08:35 am`
+
+## Day 7
+
+Beautiful and relaxing; most enjoyable yet!
+
 ## Day 6
 
 Part 2 was my most longwinded yet, in an effort to keep it clear to myself.

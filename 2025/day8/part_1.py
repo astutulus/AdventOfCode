@@ -14,11 +14,6 @@ class Point:
                 self.y == other.y and
                 self.z == other.z)
     
-    # Print string for debug
-    def __str__(self) -> str:
-        return f"{self.x},{self.y},{self.z}"
-        # return f"x: {self.x}, y: {self.y}, z: {self.z}"
-    
     # Make hashable so that it can be put in a set
     def __hash__(self):
         # Combine hashes of attributes
@@ -63,18 +58,22 @@ def solve(filepath: str):
     # Get the shortest to the front
     edges.sort()
 
-    # for i, edge in enumerate(edges):
-    #     print(f"Edge {i}:   len {edge.length}   from {edge.p1} to {edge.p2}")
-
     # Make the ten shortest into circuits
     list_of_circuit_sets: list[set[Point]] = []
-    for edge in edges[:1000]:
-        # Track the juntion at each end
+
+
+    # --------------------------------------------------
+    # Run through edges, adding 'juntions' to set(s)
+    #
+    # Unfortunately need to edit the following range;
+    #
+    #       [:10]     for the provided example, or
+    #       [:1000]   for part 1 input.
+    #
+    # --------------------------------------------------
+    for edge in edges[:1000]:        
         j1 = edge.p1
         j2 = edge.p2
-
-        # print("-----------------------")
-        # print (f"Looking at edge from {j1} to {j2}")
         
         circuit_with_j1 = None
         circuit_with_j2 = None
@@ -84,39 +83,38 @@ def solve(filepath: str):
                     circuit_with_j1 = circuit
                 if juntion == j2:
                     circuit_with_j2 = circuit
+
         # Each end found
         if circuit_with_j1 and circuit_with_j2:
             # Each end in same circuit!!
             if circuit_with_j1 == circuit_with_j2:
                 pass
+            # Each end in different circuits!!
             else:
-                # Each end in different circuits!!
                 merged_circuit: set[Point] = circuit_with_j1 | circuit_with_j2
                 list_of_circuit_sets.append(merged_circuit)
-
                 list_of_circuit_sets.remove(circuit_with_j2)
                 list_of_circuit_sets.remove(circuit_with_j1)
+
         # One end in a circuit, so add the other end
         elif circuit_with_j1:
             circuit_with_j1.add(j2)
         elif circuit_with_j2:
             circuit_with_j2.add(j1)
+
         # Not yet seen
         else:
             new_circuit: set[Point] = {j1, j2}
             list_of_circuit_sets.append(new_circuit)
 
-        # for i, circuit in enumerate(list_of_circuit_sets):
-        #     print(f"Circuit {i}")
-        #     for junction in circuit:
-        #         print (f"  {junction}")
-
+    # Make a list of circuit sizes
     list_of_circuit_sizes = []  
     for c in list_of_circuit_sets:
         list_of_circuit_sizes.append(len(c))
 
     list_of_circuit_sizes.sort()
 
+    # Multiply the largest three
     answer = 1
     for i in list_of_circuit_sizes[-3:]:
         answer *= i
