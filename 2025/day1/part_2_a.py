@@ -48,4 +48,4 @@ def solve(filepath):
     print (f"Answer: {zero_counter}")
 
 if __name__ == "__main__":
-    solve("day1\\input.txt")
+    solve("2025\\day1\\input.txt")

@@ -50,4 +50,4 @@ def solve(filepath: str):
         print(f"Sum of invlid IDs in the input data: {answer}")
 
 if __name__ == "__main__":
-    solve("day2\\input.txt")
+    solve("2025\\day2\\input.txt")

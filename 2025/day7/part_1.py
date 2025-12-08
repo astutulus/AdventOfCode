@@ -25,4 +25,4 @@ if __name__ == "__main__":
     filename = ["debug",    # index 0
                 "example",  # index 1
                 "input"]    # index 2
-    print(f"Answer: {solve(f"day7\\{filename[2]}.txt")}")  # Set filename
+    print(f"Answer: {solve(f"2025\\day7\\{filename[2]}.txt")}")  # Set filename

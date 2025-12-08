@@ -49,4 +49,4 @@ if __name__ == "__main__":
     filename = ["debug",     # index 0
                 "example",   # index 1
                 "input"]     # index 2
-    solve(f"day4\\{filename[2]}.txt")  # Change index to switch data set
+    solve(f"2025\\day4\\{filename[2]}.txt")  # Change index to switch data set

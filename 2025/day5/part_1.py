@@ -38,4 +38,4 @@ def solve(filepath: str):
 if __name__ == "__main__":
     filename = ["example",  # index 0
                 "input"]    # index 1
-    solve(f"day5\\{filename[1]}.txt")  # Change index to switch data set
+    solve(f"2025\\day5\\{filename[1]}.txt")  # Change index to switch data set
