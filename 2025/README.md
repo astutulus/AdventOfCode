@@ -1,3 +1,11 @@
+## Day 9
+
+Shocker!!
+Part 1 was the easiest yet... But part 2 will be the hardest yet!
+
+No time tonight sadly, but I definitely want to make time soon.
+Enjoyable issues e.g. I think it'll need a flood fill.
+
 ## Day 8
 
 Definitely the most involved yet.
