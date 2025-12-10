@@ -1,3 +1,11 @@
+## Day 10
+
+I've done part 1 and it works on the example!
+
+But as I write (coming up to midnight) it is running the test input far too slowly!! I'll have to leave it running overnight.
+
+I'll want to revisit to make more efficient, but uploading now as it stands.
+
 ## Day 9
 
 Shocker!!
